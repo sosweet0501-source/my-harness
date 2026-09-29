@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "source": "docs/design.md, docs/story-service.md",
+  "frame": { "width": 390, "height": 844 },
+  "g1": { "minFrames": 2, "maxFrames": 3, "storyIds": [1, 2, 3, 4, 5] },
+  "radius": {
+    "allowed": [0, 16, 24, 9999],
+    "fullWhenAtLeastHalfShortSide": true,
+    "squircle": { "namePrefix": "app-icon-squircle", "ratio": 0.3, "tolerance": 0.5 }
+  },
+  "colors": {
+    "allowed": ["#141414", "#262626", "#707070", "#adadad", "#ffffff", "#f3f3f3", "#f0f0f0", "#e0e0e0", "#0066ff"],
+    "ignoreTypes": ["IMAGE", "VIDEO"],
+    "exceptions": [{ "namePrefix": "badge-overlay", "color": "rgba(115,115,115,0.56)" }]
+  },
+  "accent": { "color": "#0066ff", "maxPerFrame": 2, "forbiddenInsideNamePrefix": "button-" },
+  "spacing": { "allowed": [0, 4, 8, 12, 16, 24, 32, 48, 64] },
+  "font": { "families": ["Pretendard", "Pretendard Variable"], "weights": [300, 400, 600, 700] },
+  "letterSpacing": { "allowed": 0, "tolerance": 0.01 },
+  "shadow": { "types": ["DROP_SHADOW", "INNER_SHADOW"], "exceptionNamePrefix": "segmented-control-active" },
+  "textCase": { "forbidden": ["UPPER", "SMALL_CAPS", "SMALL_CAPS_FORCED"] },
+  "service": {
+    "pii": [
+      { "label": "이메일", "pattern": "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}" },
+      { "label": "휴대전화", "pattern": "01[016789][-. ]?\\d{3,4}[-. ]?\\d{4}" },
+      { "label": "일반전화", "pattern": "0(2|[3-6][1-5])[-. ]?\\d{3,4}[-. ]?\\d{4}" },
+      { "label": "주민번호", "pattern": "\\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\\d|3[01])-?[1-4]\\d{6}" }
+    ],
+    "saleRequest": { "triggerText": "판매 신청", "requiredText": "검수 대기" },
+    "visibility": { "frameName": "내 자산 등록", "namePrefix": "visibility-option/selected=", "required": "비공개" }
+  }
+}

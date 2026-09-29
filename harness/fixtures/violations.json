@@ -1,0 +1,37 @@
+{
+  "description": "clean.json에 ops를 적용해 딱 그 규칙 하나만 어기게 만든 샘플. 각 샘플은 rule 하나만 걸려야 한다.",
+  "cases": [
+    { "rule": "G1-1", "gate": "G1", "note": "프레임 1개", "ops": [{ "op": "removeFrame", "index": 1 }] },
+    { "rule": "G1-2", "gate": "G1", "note": "높이 800", "ops": [{ "op": "set", "id": "1:1", "path": "size", "value": [390, 800] }] },
+    { "rule": "G1-3", "gate": "G1", "note": "설계서에 없는 프레임명", "ops": [{ "op": "set", "id": "1:1", "path": "name", "value": "홈 화면" }] },
+    { "rule": "G1-4", "gate": "G1", "note": "스토리 연결 없음", "ops": [{ "op": "spec", "from": "스토리: 1, 2", "to": "스토리:" }] },
+
+    { "rule": "G3-screens", "gate": "G3", "note": "목록에서 화면 1개 빠짐", "ops": [{ "op": "removeFrame", "index": 1 }] },
+    { "rule": "G3-screens", "gate": "G3", "note": "이름을 바꿔 S-B1 회피 시도", "ops": [{ "op": "set", "id": "2:1", "path": "name", "value": "내 자산 등록하기" }, { "op": "set", "id": "2:6", "path": "name", "value": "visibility-option/selected=멤버 공개" }] },
+    { "rule": "G3-size", "gate": "G3", "note": "완성 화면 높이 900", "ops": [{ "op": "set", "id": "1:1", "path": "size", "value": [390, 900] }] },
+
+    { "rule": "R-radius", "gate": "G3", "note": "카드 모서리 20", "ops": [{ "op": "set", "id": "1:13", "path": "cornerRadius", "value": 20 }] },
+    { "rule": "R-radius", "gate": "G3", "note": "스퀴클 30% 아님", "ops": [{ "op": "set", "id": "1:7", "path": "cornerRadius", "value": 16 }] },
+    { "rule": "R-color", "gate": "G3", "note": "허용 외 색 #000000", "ops": [{ "op": "set", "id": "1:5", "path": "fills", "value": ["#000000"] }] },
+    { "rule": "R-color", "gate": "G3", "note": "허용 외 테두리색", "ops": [{ "op": "set", "id": "1:13", "path": "strokes", "value": ["#cccccc"] }] },
+    { "rule": "R-color", "gate": "G3", "note": "badge-overlay 밖의 rgba", "ops": [{ "op": "set", "id": "1:13", "path": "fills", "value": ["rgba(115,115,115,0.56)"] }] },
+    { "rule": "R-accent", "gate": "G3", "note": "버튼 채움색에 액센트", "ops": [{ "op": "set", "id": "2:13", "path": "fills", "value": ["#0066ff"] }] },
+    {
+      "rule": "R-accent", "gate": "G3", "note": "화면당 액센트 3개",
+      "ops": [
+        { "op": "add", "parent": "1:1", "node": { "id": "1:90", "name": "accent-dot", "type": "RECTANGLE", "size": [8, 8], "fills": ["#0066ff"] } },
+        { "op": "add", "parent": "1:1", "node": { "id": "1:91", "name": "accent-dot", "type": "RECTANGLE", "size": [8, 8], "fills": ["#0066ff"] } }
+      ]
+    },
+    { "rule": "R-spacing", "gate": "G3", "note": "간격 10", "ops": [{ "op": "set", "id": "1:13", "path": "itemSpacing", "value": 10 }] },
+    { "rule": "R-font", "gate": "G3", "note": "굵기 500", "ops": [{ "op": "set", "id": "1:6", "path": "style.fontWeight", "value": 500 }] },
+    { "rule": "R-font", "gate": "G3", "note": "폰트 Inter", "ops": [{ "op": "set", "id": "1:16", "path": "style.fontFamily", "value": "Inter" }] },
+    { "rule": "R-tracking", "gate": "G3", "note": "자간 -0.5", "ops": [{ "op": "set", "id": "1:5", "path": "style.letterSpacing", "value": -0.5 }] },
+    { "rule": "R-shadow", "gate": "G3", "note": "카드 그림자", "ops": [{ "op": "set", "id": "1:13", "path": "effects", "value": [{ "type": "DROP_SHADOW" }] }] },
+    { "rule": "R-caps", "gate": "G3", "note": "대문자 변환", "ops": [{ "op": "set", "id": "1:12", "path": "style.textCase", "value": "UPPER" }] },
+    { "rule": "S-A1", "gate": "G3", "note": "더미 이메일", "ops": [{ "op": "set", "id": "1:6", "path": "characters", "value": "문의: hello@huddling.ai" }] },
+    { "rule": "S-A1", "gate": "G3", "note": "더미 휴대전화", "ops": [{ "op": "set", "id": "1:6", "path": "characters", "value": "연락처 010-1234-5678" }] },
+    { "rule": "S-A2", "gate": "G3", "note": "판매 신청인데 검수 대기 없음", "ops": [{ "op": "set", "id": "2:10", "path": "characters", "value": "판매 신청 상태: 승인됨" }] },
+    { "rule": "S-B1", "gate": "G3", "note": "기본값 멤버 공개", "ops": [{ "op": "set", "id": "2:6", "path": "name", "value": "visibility-option/selected=멤버 공개" }] }
+  ]
+}

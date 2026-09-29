@@ -1,0 +1,96 @@
+{
+  "description": "위반 0건이어야 하는 깨끗한 샘플. 색은 hex 약식, 크기는 size 약식으로 적고 test.mjs가 Figma REST 형식으로 펼친다. 예외 규칙(스퀴클 30%, segmented 활성 그림자, badge-overlay rgba, 필 모서리)을 일부러 포함한다.",
+  "spec": "# 화면 설계 (fixture)\n\n## 화면: 홈\n스토리: 1, 2\n\n## 화면: 내 자산 등록\n스토리: 3, 4\n",
+  "frames": [
+    {
+      "id": "1:1", "name": "홈", "type": "FRAME", "size": [390, 844], "fills": ["#ffffff"],
+      "layoutMode": "VERTICAL", "itemSpacing": 48, "paddingTop": 16, "paddingRight": 16, "paddingBottom": 16, "paddingLeft": 16,
+      "children": [
+        {
+          "id": "1:2", "name": "nav-pill", "type": "FRAME", "size": [358, 56], "fills": ["#f3f3f3"], "cornerRadius": 9999,
+          "layoutMode": "HORIZONTAL", "itemSpacing": 8, "paddingTop": 8, "paddingRight": 16, "paddingBottom": 8, "paddingLeft": 16,
+          "children": [
+            {
+              "id": "1:3", "name": "button-primary", "type": "FRAME", "size": [100, 44], "fills": ["#141414"], "cornerRadius": 22,
+              "layoutMode": "HORIZONTAL", "itemSpacing": 0, "paddingTop": 0, "paddingRight": 16, "paddingBottom": 0, "paddingLeft": 16,
+              "children": [
+                { "id": "1:4", "name": "label", "type": "TEXT", "characters": "무료로 시작", "fills": ["#ffffff"], "style": { "fontFamily": "Pretendard", "fontWeight": 600, "letterSpacing": 0 } }
+              ]
+            }
+          ]
+        },
+        { "id": "1:5", "name": "display", "type": "TEXT", "characters": "AI 실무 실험실", "fills": ["#141414"], "style": { "fontFamily": "Pretendard", "fontWeight": 700, "letterSpacing": 0 } },
+        { "id": "1:6", "name": "body-lg", "type": "TEXT", "characters": "배우고, 적용하고, 자산으로 남기세요.", "fills": ["#707070"], "style": { "fontFamily": "Pretendard", "fontWeight": 300, "letterSpacing": 0 } },
+        { "id": "1:7", "name": "app-icon-squircle", "type": "RECTANGLE", "size": [40, 40], "cornerRadius": 12, "fills": ["IMAGE"] },
+        {
+          "id": "1:8", "name": "segmented-control", "type": "FRAME", "size": [248, 44], "fills": ["#f3f3f3"], "cornerRadius": 9999,
+          "layoutMode": "HORIZONTAL", "itemSpacing": 4, "paddingTop": 4, "paddingRight": 4, "paddingBottom": 4, "paddingLeft": 4,
+          "children": [
+            { "id": "1:9", "name": "segmented-control-active", "type": "FRAME", "size": [120, 36], "fills": ["#ffffff"], "cornerRadius": 9999, "effects": [{ "type": "DROP_SHADOW" }] },
+            { "id": "1:10", "name": "segment-label", "type": "TEXT", "characters": "연간", "fills": ["#707070"], "style": { "fontFamily": "Pretendard", "fontWeight": 400, "letterSpacing": 0 } }
+          ]
+        },
+        {
+          "id": "1:11", "name": "badge-popular", "type": "FRAME", "size": [60, 24], "fills": ["#0066ff"], "cornerRadius": 9999,
+          "children": [
+            { "id": "1:12", "name": "label", "type": "TEXT", "characters": "Popular", "fills": ["#ffffff"], "style": { "fontFamily": "Pretendard", "fontWeight": 600, "letterSpacing": 0 } }
+          ]
+        },
+        {
+          "id": "1:13", "name": "content-card", "type": "FRAME", "size": [358, 200], "fills": ["#ffffff"], "strokes": ["#f0f0f0"], "cornerRadius": 24,
+          "layoutMode": "VERTICAL", "itemSpacing": 12, "paddingTop": 24, "paddingRight": 24, "paddingBottom": 24, "paddingLeft": 24,
+          "children": [
+            {
+              "id": "1:14", "name": "badge-overlay", "type": "FRAME", "size": [80, 24], "fills": ["rgba(115,115,115,0.56)"], "cornerRadius": 9999,
+              "children": [
+                { "id": "1:15", "name": "label", "type": "TEXT", "characters": "바이브코딩", "fills": ["#ffffff"], "style": { "fontFamily": "Pretendard", "fontWeight": 600, "letterSpacing": 0 } }
+              ]
+            },
+            { "id": "1:16", "name": "heading-3", "type": "TEXT", "characters": "QA 자동화 스킬 카드", "fills": ["#141414"], "style": { "fontFamily": "Pretendard", "fontWeight": 700, "letterSpacing": 0 } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2:1", "name": "내 자산 등록", "type": "FRAME", "size": [390, 844], "fills": ["#ffffff"],
+      "layoutMode": "VERTICAL", "itemSpacing": 24, "paddingTop": 16, "paddingRight": 16, "paddingBottom": 16, "paddingLeft": 16,
+      "children": [
+        { "id": "2:2", "name": "heading-1", "type": "TEXT", "characters": "내 자산 등록", "fills": ["#141414"], "style": { "fontFamily": "Pretendard", "fontWeight": 700, "letterSpacing": 0 } },
+        {
+          "id": "2:3", "name": "text-input", "type": "FRAME", "size": [358, 48], "fills": ["#f0f0f0"], "cornerRadius": 16,
+          "layoutMode": "HORIZONTAL", "itemSpacing": 8, "paddingTop": 12, "paddingRight": 16, "paddingBottom": 12, "paddingLeft": 16,
+          "children": [
+            { "id": "2:4", "name": "placeholder", "type": "TEXT", "characters": "자산 제목을 입력하세요", "fills": ["#adadad"], "style": { "fontFamily": "Pretendard", "fontWeight": 400, "letterSpacing": 0 } }
+          ]
+        },
+        {
+          "id": "2:5", "name": "segmented-control", "type": "FRAME", "size": [358, 44], "fills": ["#f3f3f3"], "cornerRadius": 9999,
+          "layoutMode": "HORIZONTAL", "itemSpacing": 4, "paddingTop": 4, "paddingRight": 4, "paddingBottom": 4, "paddingLeft": 4,
+          "children": [
+            {
+              "id": "2:6", "name": "visibility-option/selected=비공개", "type": "FRAME", "size": [110, 36], "fills": ["#ffffff"], "cornerRadius": 9999,
+              "children": [
+                { "id": "2:7", "name": "label", "type": "TEXT", "characters": "비공개", "fills": ["#141414"], "style": { "fontFamily": "Pretendard", "fontWeight": 600, "letterSpacing": 0 } }
+              ]
+            },
+            { "id": "2:8", "name": "label", "type": "TEXT", "characters": "멤버 공개", "fills": ["#707070"], "style": { "fontFamily": "Pretendard", "fontWeight": 400, "letterSpacing": 0 } },
+            { "id": "2:9", "name": "label", "type": "TEXT", "characters": "판매 신청", "fills": ["#707070"], "style": { "fontFamily": "Pretendard", "fontWeight": 400, "letterSpacing": 0 } }
+          ]
+        },
+        { "id": "2:10", "name": "caption", "type": "TEXT", "characters": "판매 신청 상태: 검수 대기", "fills": ["#707070"], "style": { "fontFamily": "Pretendard", "fontWeight": 400, "letterSpacing": 0 } },
+        {
+          "id": "2:11", "name": "button-outline", "type": "FRAME", "size": [358, 44], "fills": ["#ffffff"], "strokes": ["#e0e0e0"], "cornerRadius": 22,
+          "children": [
+            { "id": "2:12", "name": "label", "type": "TEXT", "characters": "임시저장", "fills": ["#141414"], "style": { "fontFamily": "Pretendard", "fontWeight": 600, "letterSpacing": 0 } }
+          ]
+        },
+        {
+          "id": "2:13", "name": "button-primary", "type": "FRAME", "size": [358, 44], "fills": ["#141414"], "cornerRadius": 22,
+          "children": [
+            { "id": "2:14", "name": "label", "type": "TEXT", "characters": "등록하기", "fills": ["#ffffff"], "style": { "fontFamily": "Pretendard", "fontWeight": 600, "letterSpacing": 0 } }
+          ]
+        }
+      ]
+    }
+  ]
+}
